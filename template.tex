@@ -30,6 +30,7 @@
 \usepackage{amssymb}
 \usepackage{cite}
 
+
 \usepackage{url}%url記入したかったので使用，普段はいらないはず
 
 
@@ -37,8 +38,8 @@
 
 \headding{大須賀・杉本研 研究会資料}
 % 和文題名
-\title{大須賀・石川研 研究会資料用スタイルファイル}  
-% 英文題名
+\title{大須賀・杉本研 研究会資料用テンプレート}  
+% 英文題名　英文題名とか，英文著者名入れたい時はosukalab2018.styの中身をいじってちょ
 %\etitle{p\LaTeX-Style file for Osuka-Sugimoto Lab. Meeting}
 % 著者の和文名
 \author{
@@ -52,7 +53,7 @@
 \abstract{Please write your English abstract here.
 }
 % キーワード
-\keywords{研究会資料,大須賀・石川研,大阪大学}
+\keywords{研究会資料,大須賀・杉本研,大阪大学}
 %
 
 \begin{document}
@@ -81,6 +82,13 @@
 
 また，たまに太字やイタリックを使いたくなることはあるでしょうが，{\bf このやり方や，}{\it Such a method}はやめましょう．\textbf{こちらのやり方や，}\textit{Such a method}を使いましょう．
 
+\begin{figure}[tb]
+ \centering %center環境はズレやすいから使わないこと，このようにcentering使いましょう
+  \includegraphics[width=\columnwidth]{./figure/testfig.pdf}
+  \caption{参照する図にもよりますが，ここにキーとなる図があると見栄えがいいと思っています}
+  \label{fig:test}
+\end{figure}
+
 \subsection{数式での基本}
 
 数式はカギカッコもしくはalign環境で書きましょう．短く$5.0$~Vとか書きたければこんな感じで．ちなみに具体的な数字の場合は単位に括弧はつけずに，$x$~(m)とか文字の場合は括弧をつけるのがスタンダードだと思っています．単位の前には改行されない半角スペースを入れるのも忘れずに．\si{kg.m.s^{-1}}とかの単位も，\num{3.14159265e34}とか\num{.3e45}の数字もsiunitパッケージ入れてると綺麗にかけるよね．数字のリストもサポートしてくれているので\numlist{ 1.0; 2.0; 3.0; 4.0; 5.0}とか，\SIlist{ 1.0; 2.0; 3.0; 4.0; 5.0}{\volt}なんてこともできるね！でもこれ英語での場合だね．あまり気にしなくてもいいかもね．
@@ -107,44 +115,104 @@
 \end{itemize}
 載せましょう．これら全ては最終出力となる書類のpdfに直接埋め込むことができるので，タイプセットも早くて楽です．
 
-%図の引用の例~\ref{fig:test}これは間違いではないけど・・・
+図の引用の例~\ref{fig:test}これは間違いではないけど・・・
 図の引用の例~\reffig{test}．%せっかくreffigあるので活用しましょう．
 
+流派にもよるとは思いますが，figure環境の配置オプションはtb!ぐらいがいいと思います．
+widthなども，直接値を指定する（width=3.4cmとか）はできる限りやめましょう．だいたい\verb#width=\columnwidth#でぴったり入るはずです．それがダメな場合はだいたい元画像がよくないです．元画像を修正しましょう．
 
+\if0%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ここからコメントアウト
+%\if0と\fiで囲まれた範囲は無視されます．たくさんコメントアウトするのが大変な時に使えますが，乱用は混乱を招くので注意
 \begin{figure}[tb]
- \centering %center環境はズレやすいから使わないこと
-  \includegraphics[width=\columnwidth]{./figure/testfig.pdf}
-  \caption{Test 1}
-  \label{fig:test}
-\end{figure}
-
-\begin{figure}[tb]
- \centering %center環境はズレやすいから使わないこと
+ \centering %center環境はズレやすいから使わないこと，このようにcentering使いましょう
   \includegraphics[width=\columnwidth]{./figure/testfig2.pdf}
   \caption{Test 2}
   \label{fig:test2}
 \end{figure}
+\fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
-\begin{table*}[t!]
+複数の画像を一つのfigure環境に入れたい場合は，subfigure環境やsubfig環境は古いようです．subcaption環境を使いましょう．
+
+\begin{figure}[tb]
+  \begin{minipage}[b]{.5\columnwidth}
+   \centering
+   \includegraphics[width=\columnwidth]{./figure/cat.png}
+   \subcaption{Tiger}
+   \label{fig:fig02left}
+ \end{minipage}%
+ \begin{minipage}[b]{.5\columnwidth}
+  \centering
+  \includegraphics[width=\columnwidth]{./figure/elephant.png}
+  \subcaption{Bear}
+  \label{fig:fig02right}
+ \end{minipage}
+ \caption{犬と羊}\label{fig:animals}
+\end{figure}
+
+\subsection{表の基本}
+
+\if0%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ここからコメントアウト
+%\if0と\fiで囲まれた範囲は無視されます．たくさんコメントアウトするのが大変な時に使えますが，乱用は混乱を招くので注意
+\begin{table*}[tb]
   \caption{Sample table}
    \label{table:test}
    \centering
    \begin{tabular}{cccccr}\hline
     Type & Name & Voltage & Unit & This is sample & by keisuke naniwa\\ \hline \hline
-   Exp. A & 46\%& 33\%& 21\%& --& --\\ \hline
+   Exp. A & 46\%& 33\%& 21\%& --& --\\ 
    Exp. B & 64\%& 9\%& 27\%& 60\%& 13\%\\ \hline    
    \end{tabular}
 \end{table*}
+\fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
+\begin{table}[tb]
+  \caption{Sample table 2}
+   \label{table:test2}
+   \centering
+   \begin{tabular}{ccc}\hline
+    Type & Name & Voltage \\ \hline \hline
+   Exp. A & 46\%& 33\% \\ 
+   Exp. B & 64\%& 9\% \\ \hline    
+   \end{tabular}
+\end{table}
 
+表はいろんな流儀がありますが，私の最近の流儀は
+\begin{itemize}
+ \item 罫線は横線だけかく，横線もなるべく少なくする
+ \item 2段組だとだいたい半分に収まらないのでブチ抜きでかく
+ \item 単位は値と合わせてかく（単位の列は作らない）
+\end{itemize}
+です．
 
+シンプルなほうが綺麗でみやすいです．間違えてもパワポやエクセルで作った表の画像を貼るとかはやめましょうね．
 
+あ，あと
+参考文献は特に気にすることないと思います．
 参考文献の例~\cite{mike,bibtest}．
 
+直接記入じゃなくて，bibファイル使いましょうね．セットに一緒に入れてあるしエラーはほとんど出ないはず・・・・．
 
 
   
 \section*{謝辞とか}
+
+\TeX 環境の日本語化やらなんやらもう色々に尽力された奥村先生\cite{okumura7th}，いつも私たちのことを先読みで色々用意してくださっている丸田先生，そのほかにもあげ始めたらキリがない先達者の方々には強く感謝しましょう．足を向けて寝てはいけません．立ったまま寝ましょう．
+
+\appendix
+\section{付録とか入れたいときはこうしよう}
+
+これだけ偉そうに\TeX のアレヤコレヤ書いてますが，ぶっちゃけ私も学生の頃は全然よくわかってなかったし，特に教えてくれる人もいませんでした．
+最初にやてふ周りのことを教えてくれたのが杉本先生だったかな？それぐらいです．
+さらには今回の資料を書くのにもかなり色々調べました．おかげで大変勉強になりました．まるで昔から知ってたように全部書いてますが，最近やたった今知ったばかりのにわか知識もたくさん入ってます．
+
+なので，私が望むことは，これを読んでいるあなたにも，ぜひ自分で勉強して，そこからさらに新しく，最新で，みんなが楽になる美しい文章をかけるように努力してくれることです．
+私の書いたテンプレートや，スタイルファイルをみて，矛盾した書き方や，重複，本来の書き方では書き方，サポートの切れた古いパッケージを未だに使っている，最新のパッケージではサポートされていることを手動で行なっている，そんな粗がたくさん見つかるようになってください．
+
+たかが文章を書くだけでなんでそんな努力をせんといかんのや，wordなら書いたままプリントアウトできるで．という方もいらっしゃるでしょう．そういう方はもうそれでいいです．
+ただ，私はレイアウトや組版規則のプロではないので美しいレイアウトの文章を自分では作れません．ですが\TeX を最新のプロの知識が反映されている状態で正しく使えば，自身がレイアウトのことを気にすることなく，読み手に優しい美しい文章がかけます．それって素晴らしいと思いませんか？
+
+今はわからなくても，人の文章をよく読むようになった頃に，このことを少しでも思い出してくれると幸いです．浪花（2018/1/4）
+
 %
 % 以下に文献を書きます。
 %
