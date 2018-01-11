@@ -114,11 +114,8 @@
 \captionsetup{format=hang,font=bf,width=\columnwidth}
 \captionsetup[table]{position=top}
 \captionsetup[subtable]{textfont=sf}
-%\captionsetup[subcaption]{labelformat=simple}
+\captionsetup[subfigure]{labelformat=simple}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
-\renewcommand{\p@subfigure}{\thefigure}
-\DeclareCaptionLabelFormat{opening}{#2}
-\captionsetup[subfigure]{labelformat=opening}
 
 \renewcommand{\fnum@figure}{{ Fig. }\thefigure}
 \renewcommand{\fnum@table}{{ Table\ }\thetable}
