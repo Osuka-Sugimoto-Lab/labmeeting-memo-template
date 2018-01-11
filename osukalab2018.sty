@@ -1,5 +1,5 @@
 %
-%   Version 1.00  2018/01/11  11:47:45  NANIWA Keisuke
+%   Version 1.00  2018/01/11  11:47:45  NANIWA Keisuke, SUGIMOTO Yasuhiro
 %
 %
 \typeout{*** Document Style 'Osuka-Sugimoto lab. for pLaTeX2e' (2018/01/10) ***}
@@ -93,7 +93,7 @@
 %%%%%%%citeのレイアウト調整
 
 \usepackage[superscript]{cite}%参考文献のいつもの
- \renewcommand\citeform[1]{(#1}%ここに入れておかないとダメっぽい（スタイルファイルに書くとうまく認識してくれない），上付き参考文献とか嫌いなら調節のこと
+ \renewcommand\citeform[1]{(#1}%上付き参考文献とか嫌いなら調節のこと
 
  
 %%%%%%%%ラベル周りの追加関数
@@ -114,8 +114,11 @@
 \captionsetup{format=hang,font=bf,width=\columnwidth}
 \captionsetup[table]{position=top}
 \captionsetup[subtable]{textfont=sf}
-\captionsetup[subcaption]{labelformat=simple}
-\renewcommand*{\thesubfigure}{(\alph{subfigure})}
+%\captionsetup[subcaption]{labelformat=simple}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\renewcommand{\p@subfigure}{\thefigure}
+\DeclareCaptionLabelFormat{opening}{#2}
+\captionsetup[subfigure]{labelformat=opening}
 
 \renewcommand{\fnum@figure}{{ Fig. }\thefigure}
 \renewcommand{\fnum@table}{{ Table\ }\thetable}
@@ -136,4 +139,9 @@
 \setcounter{topnumber}{6}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{8}
+
+% 図と図の間のスペース
+\setlength\floatsep{2truemm}
+% 本文と図の間のスペース
+\setlength\textfloatsep{2truemm}
  
