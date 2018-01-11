@@ -15,12 +15,14 @@
 %%  $Id: template.tex,v 1.2 2000/01/12 08:18:03 ken Exp $
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[l2tabu, orthodox]{nag}%おまじない
+
 \documentclass[a4j]{jsarticle}
 \usepackage{osukalab2018}%使用前にstyファイル内を一度目を通しておくこと
 \usepackage{epic,eepic}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{amsmath}	% required for `\align' (yatex added)もし必要なパッケージがインクルードされてない場合，こんな感じでやてふが自動で入れてくれます（ただし^C^Bでやった場合だけ．みんな^C^B使ってるよね・・・？）
-
+\usepackage[all, warning]{onlyamsmath}
 %\usepackage{epsfig} % このパッケージは使わずに画像の形式はPDFを使いましょう
 %写真はjpg,スクショはpng,グラフやイラストはpdfで
 %matlabでのグラフ出力については別で
@@ -28,12 +30,22 @@
 %\usepackage{times} % これもう古いのでtxfonts使おね
 \usepackage{txfonts} %綺麗なtimesフォント系への切り替え
 \usepackage{amssymb}
-\usepackage{cite}
+\numberwithin{equation}{section}%式がたくさん出る人はこちらをどうぞ，3章の5式目とかがeq.(3.5)とかになります
 
 
-\usepackage{url}%url記入したかったので使用，普段はいらないはず
+\usepackage[dvipdfmx]{hyperref}%ここら辺は本来いりませんハイパーリンク用です
+\usepackage{pxjahyper}%ここら辺は本来いりませんハイパーリンク用です
+\hypersetup{% hyperrefオプションリスト
+setpagesize=false,
+ bookmarksnumbered=true,%
+ bookmarksopen=true,%
+ colorlinks=true,%
+ linkcolor=blue,
+ citecolor=blue,
+}
 
 
+ 
 \pagestyle{empty}
 
 \headding{大須賀・杉本研 研究会資料}
@@ -66,13 +78,12 @@
 一部スタートダッシュ課題の解答に近いものや，解答そのものがあるので，スタートダッシュプログラムを終えてから参照する方が良いかもしれません．
 
 \section{いろんな基本}
+
 \subsection{文章での基本}
 分野や流派によって異なりますが，基本的に句読点はカンマとピリオドを使用しましょう．
 日本語の文中では，カンマとピリオドは全角，数式や英文の中では半角で記入しましょう．
 また，一部漢字をなるべく使わないなどのマナーもあります．（ex.殆ど→ほとんど，最も→もっとも，など）漢字使うとかっこいいかもしれませんが，ぶっちゃけ読みづらいです（逆もまたしかりですが，あまりにもひらがなばかりだと読みにくい場合もありますよね）．大切なのは指定のルールに従うことと，ルールに記載がなければあなたの采配で，資料や論文内で統一することです．
-漢字かひらがなか迷ったらこちらのサイトなどを参照するのも良いでしょう．
-
-\url{http://www.yamanouchi-yri.com/yrihp/techwrt-2-4s/t-2-4s03a.htm}
+漢字かひらがなか迷ったら\href{http://www.yamanouchi-yri.com/yrihp/techwrt-2-4s/t-2-4s03a.htm}{こちらのサイト}などを参照するのも良いでしょう．
 
 
 また，改行ですが\\
@@ -105,6 +116,9 @@
 どちらの環境内でも最新のやてふなら数学記号のショートカット（セミコロンキー）やギリシャ文字のショートカット（コロンキー）に反応してくれるので安心です．
 式を参照する場合は\refeq{test}とするとOK．
 
+数式を使う人は\href{http://www.math.tohoku.ac.jp/~kuroki/LaTeX/howtolatex.html}{このサイト}も参照しましょう．
+
+
 \subsection{図の基本}
 
 スーパー何度も書いたり言ったりしてるのでさすがに大丈夫だと思いますが，
@@ -115,8 +129,8 @@
 \end{itemize}
 載せましょう．これら全ては最終出力となる書類のpdfに直接埋め込むことができるので，タイプセットも早くて楽です．
 
-図の引用の例~\ref{fig:test}これは間違いではないけど・・・
-図の引用の例~\reffig{test}．%せっかくreffigあるので活用しましょう．
+図の引用の例Fig.~\ref{fig:test}これは間違いではないけど・・・
+図の引用の例\reffig{test}．%せっかくreffigあるので活用しましょう．これ使う場合はチルダ内臓されているのでチルダの入れ忘れもなくて安心
 
 流派にもよるとは思いますが，figure環境の配置オプションはtb!ぐらいがいいと思います．
 widthなども，直接値を指定する（width=3.4cmとか）はできる限りやめましょう．だいたい\verb#width=\columnwidth#でぴったり入るはずです．それがダメな場合はだいたい元画像がよくないです．元画像を修正しましょう．
@@ -131,20 +145,20 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 \end{figure}
 \fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
-複数の画像を一つのfigure環境に入れたい場合は，subfigure環境やsubfig環境は古いようです．subcaption環境を使いましょう．
+複数の画像を一つのfigure環境に入れたい場合は，subfigure環境やsubfig環境は古いようです．subcaption環境を使いましょう\reffig{animals}．こんな感じで参照も可能\reffig{frog}．
 
 \begin{figure}[tb]
   \begin{minipage}[b]{.5\columnwidth}
    \centering
    \includegraphics[width=\columnwidth]{./figure/cat.png}
    \subcaption{Tiger}
-   \label{fig:fig02left}
+   \label{fig:frog}
  \end{minipage}%
  \begin{minipage}[b]{.5\columnwidth}
   \centering
   \includegraphics[width=\columnwidth]{./figure/elephant.png}
   \subcaption{Bear}
-  \label{fig:fig02right}
+  \label{fig:gorilla}
  \end{minipage}
  \caption{犬と羊}\label{fig:animals}
 \end{figure}
@@ -192,26 +206,92 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 
 直接記入じゃなくて，bibファイル使いましょうね．セットに一緒に入れてあるしエラーはほとんど出ないはず・・・・．
 
+\section{いろんなパターン例}\label{sec:基本}
+\subsection{節はこんな感じ}\label{sec:基本2}
+\subsubsection{もういっちょ}
+
+セクションの参照\ref{sec:基本}章です．
+セクションの参照\refsec{基本} 章です．
+
+セクションの参照\refsec{基本2} 節です．
+
+大きな式が入ると
+\begin{align}
+ & \left(\frac{xdx}{dy} -\frac{ydy}{dx}\right)^{2} \ ,\ \left[\vec{F} =m\vec{a}\right] \ ,\ \left| \frac{a}{b}\right| \ \left\Vert \frac{a}{b}\right\Vert \ \left< \frac{a}{b}\right> \left\{\sqrt{a+\sqrt{a}}\rightarrow \infty \right\} 
+\end{align}
+
+たくさん式が入ると
+\begin{align}
+ \nabla \cdot \mathbf{D} & =\rho \ \mathrm{and} \ \nabla \cdot \mathbf{B} =0\ \\
+ \int ^{a}_{b} f'( x) dx & = f( b) -f( a)\\
+ e &= \lim\limits _{n\rightarrow \infty }\left( 1+\frac{1}{n}\right)^{n}
+\end{align}
+
+\reftab{test}はぶち抜き表の例
+
+\begin{table*}[tb]
+  \caption{Sample table}
+   \label{tab:test}
+   \centering
+   \begin{tabular}{cccccr}\hline
+    Type & Name & Voltage & Unit & This is sample & by keisuke naniwa\\ \hline \hline
+   Exp. A & 46\%& 33\%& 21\%& --& --\\ 
+   Exp. B & 64\%& 9\%& 27\%& 60\%& 13\%\\ \hline    
+   \end{tabular}
+\end{table*}
+
+\begin{itemize}
+ \item これは
+ \item 箇条書きの例です
+ \item 段落頭と箇条書きの文字の頭が合うようにしています
+ \item[壱.] とかもできます 
+\end{itemize}
+
+\begin{enumerate}
+ \item これは数字での
+ \item 箇条書き
+ \item ですよ
+\end{enumerate}
+
+\begin{description}
+ \item[一つ！]　見出しを 
+ \item[二つ！]　作りたい箇条書きは
+ \item[みてるー？]　こうするよ 
+ \item[段落を]\mbox{}\\
+	    入れたかったらこうしてね
+ \item[入り身]\mbox{}\\
+	    取りが受けの左手側に取りの右足を滑り込ませる動作
+ \item[転換]\mbox{}\\
+	    取りが取りの右足中心に時計回りに$180$度回転し，受けの姿勢を崩す動作
+\end{description}
+
+
+
+\begin{quotation}
+ 引用先から文章をそのまま引用するときはこの環境下で書くよ
+\end{quotation}
 
   
 \section*{謝辞とか}
 
-\TeX 環境の日本語化やらなんやらもう色々に尽力された奥村先生\cite{okumura7th}，いつも私たちのことを先読みで色々用意してくださっている丸田先生，そのほかにもあげ始めたらキリがない先達者の方々には強く感謝しましょう．足を向けて寝てはいけません．立ったまま寝ましょう．
+\LaTeXe 環境の日本語化やらなんやらもう色々に尽力された奥村先生\cite{okumura7th}，いつも私たちのことを先読みで色々用意してくださっている丸田先生，そのほかにもあげ始めたらキリがない先達者の方々には強く感謝しましょう．足を向けて寝てはいけません．立ったまま寝ましょう．
 
 \appendix
 \section{付録とか入れたいときはこうしよう}
 
-これだけ偉そうに\TeX のアレヤコレヤ書いてますが，ぶっちゃけ私も学生の頃は全然よくわかってなかったし，特に教えてくれる人もいませんでした．
+これだけ偉そうに\LaTeXe のアレヤコレヤ書いてますが，ぶっちゃけ私も学生の頃は全然よくわかってなかったし，特に教えてくれる人もいませんでした．
 最初にやてふ周りのことを教えてくれたのが杉本先生だったかな？それぐらいです．
 さらには今回の資料を書くのにもかなり色々調べました．おかげで大変勉強になりました．まるで昔から知ってたように全部書いてますが，最近やたった今知ったばかりのにわか知識もたくさん入ってます．
 
 なので，私が望むことは，これを読んでいるあなたにも，ぜひ自分で勉強して，そこからさらに新しく，最新で，みんなが楽になる美しい文章をかけるように努力してくれることです．
-私の書いたテンプレートや，スタイルファイルをみて，矛盾した書き方や，重複，本来の書き方では書き方，サポートの切れた古いパッケージを未だに使っている，最新のパッケージではサポートされていることを手動で行なっている，そんな粗がたくさん見つかるようになってください．
+私の書いたテンプレートや，スタイルファイルをみて，矛盾した書き方や，重複，本来の書き方ではない書き方，サポートの切れた古いパッケージを未だに使っている，最新のパッケージではサポートされていることを手動で行なっている，そんな粗がたくさん見つかるようになってください．
 
 たかが文章を書くだけでなんでそんな努力をせんといかんのや，wordなら書いたままプリントアウトできるで．という方もいらっしゃるでしょう．そういう方はもうそれでいいです．
 ただ，私はレイアウトや組版規則のプロではないので美しいレイアウトの文章を自分では作れません．ですが\TeX を最新のプロの知識が反映されている状態で正しく使えば，自身がレイアウトのことを気にすることなく，読み手に優しい美しい文章がかけます．それって素晴らしいと思いませんか？
 
 今はわからなくても，人の文章をよく読むようになった頃に，このことを少しでも思い出してくれると幸いです．浪花（2018/1/4）
+
+
 
 %
 % 以下に文献を書きます。

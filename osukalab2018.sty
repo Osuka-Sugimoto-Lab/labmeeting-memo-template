@@ -1,50 +1,30 @@
 %
-%   Modefied by Keisuke Naniwa 2017/12/27
-%     - remove typearea and add geometry package
-%     - コメントアウトされている2度と使わなさそうなゴミを削除
+%   Version 0.5  2018/01/10  02:51:23  NANIWA Keisuke
 %
-%   Modefied by Keisuke Naniwa 2017/12/27
-%     ○ 研究会用を想定したものに修正
-%     ○ 丸田先生のべからず集を参考に古い記述を新しいものに変更
-%     ◯ ほとんどのレイアウト系の記述をコメントアウト，デフォルトが一番綺麗です．
 %
-%   Modefied by Yasuhiro Sugimoto 2009/06/19 
-%     ○ remove engtitle, engauthor
-%
-%   Modefied by Koh Hosoda 2001/06/13 for pLaTeX2e
-%     ○ jarticle.styの読込みを元のファイルにする(.clsへの対応のため)
-%     ○ \def\documentに関する定義を削除(もともと，この定義はlatex.tex内でな
-%        されているため，pLaTeX2eではエラーとなる)
-%     ○ latex209と，見てくれが似るように，title回りの寸法調整
-%
-%   Revision 1.2  1995/08/18  08:25:44  oshiro
-%	14/08/95 OSHIRO Naoki
-% 
-%
-%\typeout{*** Document Style 'RSJ 2004 for pLaTeX2e' (2003/04/07) ***}
-\typeout{*** Document Style 'RSJ 2007 for pLaTeX2e' (2007/04/01) ***}
+\typeout{*** Document Style 'Osuka-Sugimoto lab. for pLaTeX2e' (2018/01/10) ***}
 
+%%%%%2段組，文字揃え
 \twocolumn
 \sloppy
 
+%%%%%全体のレイアウト
 \usepackage{geometry}
 \geometry{left=20mm,right=20mm,top=20mm,bottom=20mm}
 \renewcommand{\baselinestretch}{0.9}
 
 
+%%%%%%タイトル周りの定義,どうやらここはdefで書くらしい？
 \def\title#1{\gdef\@title{#1}}
 \def\engtitle#1{\gdef\@engtitle{#1}}
 \def\author#1{\gdef\@author{#1}}
 \def\engauthor#1{\gdef\@engauthor{#1}}
 \def\keywords#1{\gdef\@keywords{#1}}
 \def\headding#1{\gdef\@headding{#1}}
-\def\and{%%   % \begin{tabular} 
-  \end{tabular}%
-  \hskip 1zw plus .01fil%
-  \begin{tabular}[t]{c}%% \end{tabular}
-  }
 
-   \def\@maketitle{\newpage%
+
+%%%%%%%%%タイトル周りのレイアウト調整，狭くしています
+\def\@maketitle{\newpage%
 %  \null%
 %  \@date
 \hspace*{\fill}
@@ -53,11 +33,11 @@
   \@date
 \end{tabular}
   \begin{center} 
-    {\LARGE\bf \@title \par } %
+    {\LARGE \textbf{ \@title }\par } %
     \vskip 1em %
     {\large \@author }%
 %    \vskip 1em
-%    {\large\bf \@engtitle}
+%    {\large \textbf{ \@engtitle }}
 %    \vskip 1em
 %    {\large \@engauthor}
   \end{center}%
@@ -66,12 +46,11 @@
     \begin{center}
       \begin{minipage}{.9\textwidth}%
    \vspace*{2.0mm} % added for pLaTeX
-      {\bf Abstract---}\@abstract%
+      {\textbf{Abstract---}}\@abstract%
       \end{minipage}%
     \end{center}%
     \gdef\@abstract{}}%
-%   \vspace*{0.0mm} % added for pLaTeX
-   \vspace*{4.0mm} % added for pLaTeX
+   \vspace*{0.0mm} % added for pLaTeX
   \@ifundefined{@keywords}{}{%
     \small%
     \begin{center}
@@ -81,123 +60,80 @@
     \end{center}
     \gdef\@keywords{}}%
    \vspace*{5.0mm} % added for pLaTeX
-%    \hbox{\kern .3\textwidth\vbox{\hrule width .4\textwidth}}%
     \vskip 1zh}%
 \long\def\abstract#1{\long\gdef\@abstract{#1}}%
 
-\def\thesection{\arabic{section}.}
-\def\thesubsection{\arabic{section}$\cdot$\arabic{subsection}}
+%%%%%%%章節のスタイル調整
+\usepackage{secdot}
+\sectiondot{section}
+%\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection. \arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.. \arabic{subsubsection}}
 
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+{.3\Cvs \@plus.3\Cdp \@minus.2\Cdp}%
+{.3\Cvs \@plus.3\Cdp}%
+ {\reset@font\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+{.3\Cvs \@plus.3\Cdp \@minus.2\Cdp}%
+{.3\Cvs \@plus.3\Cdp}%
+ {\reset@font\normalsize\bfseries}}
+ \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+{.3\Cvs \@plus.3\Cdp \@minus.2\Cdp}%
+{.3\Cvs \@plus.3\Cdp}%
+ {\reset@font\normalsize\bfseries}}
+%第1引数：カウンタ名（sectionやsubsectionなど）
+%第2引数：レベル（深さ）。 section は１、subsection は2。
+%第3引数：見出し前に付加するインデント量。 \z@ は 0pt の省略形でインデント無しを指定する。
+%第4引数：絶対値が見出し前に付けられる空白量。負の場合見出しに続くテキストのインデントを抑制する。
+%第5引数：見出し後に付けられる垂直方向の空白量（負値の場合、見出し後に改行されず絶対値分だけ水平方向の空白がつくられる）
+%第6引数：見出しのスタイル
+% 引数の中にある\Cvs, \Cdpは日本語用の長さの変数で \baselineskip, \dp0 を意味します。 \@plus, \@minus は、plus, minus と同じ
 
+%%%%%%%citeのレイアウト調整
 
-\def\section{\@startsection {section}{1}{\z@}{.8ex plus .5ex minus 
- .2ex}{.5ex plus .2ex}{\large\bf}}
-\def\subsection{\@startsection{subsection}{2}{\z@}{.8ex plus .5ex minus 
- .2ex}{.5ex plus .2ex}{\normalsize\bf}}
-\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{.8ex plus 
-.5ex minus .2ex}{.5ex plus .2ex}{\normalsize\bf}}
-\def\paragraph{\@startsection
- {paragraph}{4}{\z@}{0.5ex plus .3ex minus .2ex}{-1em}{\normalsize\bf}}
-\def\subparagraph{\@startsection
- {subparagraph}{4}{\parindent}{0.5ex plus .3ex minus 
- .2ex}{-1em}{\normalsize\bf}}
+\usepackage[superscript]{cite}%参考文献のいつもの
+ \renewcommand\citeform[1]{(#1}%ここに入れておかないとダメっぽい（スタイルファイルに書くとうまく認識してくれない），上付き参考文献とか嫌いなら調節のこと
 
-\def\labfig#1{\label{fig:#1}}
-\def\labtab#1{\label{tab:#1}}
-\def\labeq#1{\label{eq:#1}}
-\def\reffig#1{\textbf{Fig.~}\ref{fig:#1}}
-\def\reftab#1{\textbf{Table.~}\ref{tab:#1}}
-\def\refeq#1{\textbf{eq.~}(\ref{eq:#1})}
+ 
+%%%%%%%%ラベル周りの追加関数
+\newcommand{\labfig}[1]{\label{fig:#1}}
+\newcommand{\labtab}[1]{\label{tab:#1}}
+\newcommand{\labeq}[1]{\label{eq:#1}}
+\newcommand{\labsec}[1]{\label{sec:#1}}
 
+\newcommand{\reffig}[1]{\textbf{Fig.~}\ref{fig:#1}}
+\newcommand{\reftab}[1]{\textbf{Table.~}\ref{tab:#1}}
+\newcommand{\refeq}[1]{\textbf{eq.~}(\ref{eq:#1})}
+\newcommand{\refsec}[1]{\ref{sec:#1}}
 
-
-%\long\def\@caption#1[#2]#3{\par\addcontentsline{\csname
-%  ext@#1\endcsname}{#1}{\protect\numberline{\csname 
-%  the#1\endcsname}{\ignorespaces #2}}\begingroup
-%    \@parboxrestore
-%    \normalsize
-%    \small
-%    \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
-%  \endgroup}
+ 
+%%%%%caption系の設定
 \usepackage{subcaption}
 \usepackage{caption}%基本命令なので入れておく
 \captionsetup{format=hang,font=bf,width=\columnwidth}
 \captionsetup[table]{position=top}
 \captionsetup[subtable]{textfont=sf}
+\captionsetup[subcaption]{labelformat=simple}
+\renewcommand*{\thesubfigure}{(\alph{subfigure})}
 
-\def\fnum@figure{{ Fig. }\thefigure}
-\def\fnum@table{{ Table\ }\thetable}
+\renewcommand{\fnum@figure}{{ Fig. }\thefigure}
+\renewcommand{\fnum@table}{{ Table\ }\thetable}
 
-\def\deg{${}^\circ$}
-\def\atan2{\mbox{atan2}}
-\def\arg{\mbox{arg}}
-
-\newcounter{stepnumber}
-\newenvironment{stepping}{\usecounter{stepnumber}}{}%
-\def\step{%
-  \addtocounter{stepnumber}{1}%
-  \parindent=0pt %
-  \par%
-  {\bf Step \arabic{stepnumber}.}%
-  \hspace{1em}}
-
-\def\quotation{% \begin{quotation} で実行される命令
-  \list{}{% \list は \begin{list} で実行される命令
-    \listparindent=5ex		% 段落の頭下げ
-    \itemindent=\listparindent	% 項目の頭下げも同じ
-    \rightmargin\leftmargin	% 左右の空白を等しく
-    \parsep 0pt plus 1pt}
-  \item[]}
-\let\endquotation=\endlist	% \end{quotation} で実行される命令
-
-\def\quote{% \begin{quote} で実行される命令
-  \list{}{\rightmargin\leftmargin}\item[]}
-			% 段落の頭下げをしない点が quotation と異なる
-\let\endquote=\endlist% \end{quote} で実行される命令
-
-\newcount\@itemdepth \@itemdepth = 0
-\def\itemize{%
-  \ifnum %
-    \@itemdepth >3 \@toodeep%
-  \else %
-    \advance\@itemdepth \@ne%
-    \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
-    \list{\csname\@itemitem\endcsname}{%
-      \def\makelabel##1{\hss\llap{##1}}%
-      \topsep 3pt%
-      \partopsep 0pt%
-      \parsep 0pt%
-      \itemsep 0pt}%
-  \fi}
-\let\enditemize =\endlist
-
-\newcount\@enumdepth \@enumdepth = 0
-\@definecounter{enumi}
-\@definecounter{enumii}
-\@definecounter{enumiii}
-\@definecounter{enumiv}
-\def\enumerate{%
-  \ifnum %
-    \@enumdepth >3 \@toodeep
-  \else%
-    \advance\@enumdepth \@ne %
-    \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
-    \list{\csname label\@enumctr\endcsname}{%
-      \usecounter{\@enumctr}%
-      \def\makelabel##1{\hss\llap{##1}}
-      \topsep 3pt%
-      \partopsep 0pt%
-      \parsep 0pt%
-      \itemsep 0pt}%
-  \fi}
-\let\endenumerate =\endlist
-
-% フロートの各設定
-\setcounter{topnumber}{3}
-\def\topfraction{.95}
+%%%%箇条書き系はenumitemに統一，引用はデフォルトでいいんじゃない？
+\usepackage{enumitem}
+   \setlist[itemize]{labelindent=\parindent,leftmargin=*}
+   \setlist[enumerate]{labelindent=\parindent,leftmargin=*}
+   \setlist[description]{labelindent=\parindent,leftmargin=*}
+   
+%%%%%フロートの設定：なるべく図が入るようにしています
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\dbltopfraction}{1.0}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{1.0}
+\renewcommand{\dblfloatpagefraction}{1.0}
+\setcounter{topnumber}{6}
 \setcounter{bottomnumber}{2}
-\def\bottomfraction{.95}
-\setcounter{totalnumber}{4}
-\def\textfraction{.05}
-\def\floatpagefraction{.5}
-
+\setcounter{totalnumber}{8}
+ 
