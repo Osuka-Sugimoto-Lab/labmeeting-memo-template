@@ -1,0 +1,41 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\documentclass[a4j]{jsarticle}
+%\usepackage{osukalab2018} %大須賀研スタイルファイルを使用しないセットアップ
+%何も入れなくてもlatexの基本環境でセットアップ可能です．
+\usepackage{epic,eepic}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage[all, warning]{onlyamsmath}
+\usepackage{siunitx}
+\usepackage{txfonts}
+\usepackage{amssymb}
+
+\usepackage[superscript]{cite}%参考文献のいつもの
+\usepackage{subcaption}
+\usepackage{caption}%基本命令なので入れておく
+\usepackage{enumitem}
+
+%ref~系の命令を使いたい時にどうぞ
+%\newcommand{\reffig}[1]{\textbf{Fig.~}\ref{fig:#1}}
+%\newcommand{\reftab}[1]{\textbf{Table.~}\ref{tab:#1}}
+%\newcommand{\refeq}[1]{\textbf{eq.~}(\ref{eq:#1})}
+%\newcommand{\refsec}[1]{\ref{sec:#1}}
+
+
+\pagestyle{empty}
+
+\title{}  
+\author{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{}
+
+
+{\small
+\bibliographystyle{junsrt}%ここも基本のやつに変更
+\bibliography{myref}
+\clearpage
+\end{document}
