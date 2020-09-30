@@ -4,7 +4,7 @@
 %			reftabのTable.→Tableに変更
 %   Version 1.02  2020/06/24  18:06:23  NANIWA keisuke
 %      \bfという古い記述を\textbf{}に変更
-%      captionパッケージ使うなって言われるけど，代替品がわからないので保留->readmeに追記
+%      captionパッケージ使うなって言われるけど，代替品がわからないので保留
 %
 \typeout{*** Document Style 'Osuka-Sugimoto lab. for pLaTeX2e' (2018/01/10) ***}
 
@@ -113,11 +113,8 @@
 
 
 %%%%%caption系の設定
-\usepackage{caption}
-
-%\usepackage{subcaption}
-\usepackage[subrefformat=parens]{subcaption}
-\captionsetup{compatibility=false}
+\usepackage{caption}%基本命令なので入れておく
+\usepackage{subcaption}
 \captionsetup{format=hang,font=bf,width=\columnwidth}
 \captionsetup[table]{position=top}
 \captionsetup[subtable]{textfont=sf}
