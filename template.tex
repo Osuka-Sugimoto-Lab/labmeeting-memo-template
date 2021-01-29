@@ -15,12 +15,13 @@
 %%   
 %%　 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{plautopatch}%新おまじない
 \RequirePackage[l2tabu, orthodox]{nag}%おまじない
 
-\documentclass[a4j]{jsarticle}
+\documentclass[platex,dvipdfmx]{jlreq}%ドキュメントクラスオプションの時点で，メソッドを明記しておく
 \usepackage{osukalab2020}%使用前にstyファイル内を一度目を通しておくこと
 \usepackage{epic,eepic}
-\usepackage[dvipdfmx]{graphicx}
+\usepackage{graphicx}%冒頭でdvipdfmxを指定しているためここでの記述は不要
 \usepackage{amsmath}	% required for `\align' (yatex added)もし必要なパッケージがインクルードされてない場合，こんな感じでやてふが自動で入れてくれます（ただし^C^Bでやった場合だけ．みんな^C^B使ってるよね・・・？）
 \usepackage[all, warning]{onlyamsmath}
 %\usepackage{epsfig} % このパッケージは使わずに画像の形式はPDFを使いましょう
@@ -91,8 +92,8 @@ setpagesize=false,
 
 このように空行を入れることで改行するようにしましょう．なぜかは出力を見ればわかるはずです．スラッシュによる改行はtabler環境内だけなどにしましょう．
 
-また，たまに太字やイタリックを使いたくなることはあるでしょうが，{\bf このやり方や，}{\it Such a method}はやめましょう．\textbf{こちらのやり方や，}\textit{Such a method}を使いましょう．
-前者の書き方は古い書き方で，イタリックにしつつ太字などは，{\bf {\it Sample text} }ではうまくいかず，\textbf{\textit{Samplle text}}ならばうまくいくからです．
+また，たまに太字やイタリックを使いたくなることはあると思いますが，\textbf{こちらのやり方や，}\textit{Such a method}を使いましょう．
+イタリックにしつつ太字などは\textbf{\textit{Samplle text}}とすればうまくいきます．
 あなたがエディタにVSCodeを使っていて，tex環境がちゃんと整えられていれば，この文章をタイプセットしたときに，前者の書き方は警告がでるはずです．
 
 \begin{figure}[tb]
