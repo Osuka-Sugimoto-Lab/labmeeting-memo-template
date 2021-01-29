@@ -31,3 +31,5 @@ See the caption package documentation for explanation.
 ドキュメントクラスをニューノーマルなjlreqに．
 それに合わせて詳細を変更．
 あと上記変更に伴って，\bfとか\itは完全に使えなくなりました．
+
+参考： [日本語 LaTeX の新常識 2021](https://qiita.com/wtsnjp/items/76557b1598445a1fc9da)
