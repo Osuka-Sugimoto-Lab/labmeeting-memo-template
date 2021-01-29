@@ -222,7 +222,8 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 大きな式が入ると
 \begin{align}
  & \left(\frac{xdx}{dy} -\frac{ydy}{dx}\right)^{2} \ ,\ \left[\vec{F} =m\vec{a}\right] \ ,\ \left| \frac{a}{b}\right| \ \left\Vert \frac{a}{b}\right\Vert \ \left< \frac{a}{b}\right> \left\{\sqrt{a+\sqrt{a}}\rightarrow \infty \right\} 
-\end{align}
+\end{align}%
+（この数式は横幅がちょっと長いから組版したときに警告が出るね！\LaTeXe はそれでも空気を読んでくれるので大丈夫だけど，あまり警告は出さないようにしようね！）
 
 たくさん式が入ると
 \begin{align}
@@ -231,7 +232,20 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
  e &= \lim\limits _{n\rightarrow \infty }\left( 1+\frac{1}{n}\right)^{n}
 \end{align}
 
-\reftab{test}はぶち抜き表の例
+そういえば，数式の記号のルールはみんなちゃんと調べてね．
+たとえばよくあるミスで
+\begin{align}
+  sin(\theta_i) = \bar{a_{max}}
+\end{align}
+とかはやらないようにね（りゆうは先輩に聞いてね！）
+\begin{align}
+  \sin(\theta_i) = \bar{a}_{\textrm{max}}
+\end{align}
+こっちの方が正しいね！
+
+
+
+\reftab{test}はぶち抜き表の例だよ．
 
 \begin{table*}[tb]
   \caption{Sample table}
