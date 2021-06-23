@@ -22,7 +22,7 @@
 \usepackage{osukalab2020}%使用前にstyファイル内を一度目を通しておくこと
 \usepackage{epic,eepic}
 \usepackage{graphicx}%冒頭でdvipdfmxを指定しているためここでの記述は不要
-\usepackage{amsmath}	% required for `\align' (yatex added)もし必要なパッケージがインクルードされてない場合，こんな感じでやてふが自動で入れてくれます（ただし^C^Bでやった場合だけ．みんな^C^B使ってるよね・・・？）
+\usepackage{amsmath}	% required for `\align' 
 \usepackage[all, warning]{onlyamsmath}
 %\usepackage{epsfig} % このパッケージは使わずに画像の形式はPDFを使いましょう
 %写真はjpg,スクショはpng,グラフやイラストはpdfで
@@ -118,7 +118,8 @@ setpagesize=false,
 \end{align}
 どちらの環境内でも最新のやてふなら数学記号のショートカット（セミコロンキー）やギリシャ文字のショートカット（コロンキー）に反応してくれるので安心です．
 式を参照する場合は\refeq{test}とするとOK．
-
+数式の環境はequationとかeqnarrayとかがありますが，一番のおすすめはalign環境です．
+一番融通がききつつ，レイアウトも綺麗です．おそらく一番のスタンダードだとおもいます．もっといいの知っている人はおしえてください．
 数式を使う人は\href{http://www.math.tohoku.ac.jp/~kuroki/LaTeX/howtolatex.html}{このサイト}も参照しましょう．
 
 
@@ -202,13 +203,16 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 \end{itemize}
 です．
 
-シンプルなほうが綺麗でみやすいです．間違えてもパワポやエクセルで作った表の画像を貼るとかはやめましょうね．
+シンプルなほうが綺麗でみやすいです．間違えてもパワポやエクセルで作った表の画像を貼るとかはやめましょう．
 
 あ，あと
 参考文献は特に気にすることないと思います．
 参考文献の例~\cite{mike,bibtest}．
 
 直接記入じゃなくて，bibファイル使いましょうね．セットに一緒に入れてあるしエラーはほとんど出ないはず・・・・．
+手書きで一つ一つ書いていくのは間違えるし，文献増やすと手間が増える一方なのでやめましょう．bibtex使えるようになってね．
+bibtex_template.bibってファイルがあるので，その中をみて，必要な文献情報を入れましょう．
+文献ごとに年数の表記や，雑誌の表記（特に省略形で書くかどうか）などを統一しておきましょう．%そのうちこの例も入れたい，結局雑誌の方針に従うのがベストだけど，あまりにもミスが多くなりがちなので
 
 \section{いろんなパターン例}\label{sec:基本}
 \subsection{節はこんな感じ}\label{sec:基本2}
@@ -316,7 +320,7 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 %
 {\small
 \bibliographystyle{osukalab}
-\bibliography{myref}
+\bibliography{myref}%bibtex_template.bibに自分の文献情報を書き込んで，ここのmyrefをbibtex_templateに書き換えよう
 
 
 \clearpage
