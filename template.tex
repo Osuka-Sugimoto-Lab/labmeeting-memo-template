@@ -184,6 +184,19 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 \end{table*}
 \fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
+\reftab{test}はぶち抜き表の例だよ．
+
+\begin{table*}[t!!]
+  \caption{Sample table}
+   \label{tab:test}
+   \centering
+   \begin{tabular}{cccccr}\hline
+    Type & Name & Voltage & Unit & This is sample & by keisuke naniwa\\ \hline \hline
+   Exp. A & 46\%& 33\%& 21\%& --& --\\ 
+   Exp. B & 64\%& 9\%& 27\%& 60\%& 13\%\\ \hline    
+   \end{tabular}
+\end{table*}
+
 \begin{table}[tb]
   \caption{Sample table 2}
    \label{table:test2}
@@ -246,21 +259,6 @@ bibtex_template.bibってファイルがあるので，その中をみて，必�
   \sin(\theta_i) = \bar{a}_{\textrm{max}}
 \end{align}
 こっちの方が正しいね！
-
-
-
-\reftab{test}はぶち抜き表の例だよ．
-
-\begin{table*}[tb]
-  \caption{Sample table}
-   \label{tab:test}
-   \centering
-   \begin{tabular}{cccccr}\hline
-    Type & Name & Voltage & Unit & This is sample & by keisuke naniwa\\ \hline \hline
-   Exp. A & 46\%& 33\%& 21\%& --& --\\ 
-   Exp. B & 64\%& 9\%& 27\%& 60\%& 13\%\\ \hline    
-   \end{tabular}
-\end{table*}
 
 \begin{itemize}
  \item これは
