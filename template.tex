@@ -56,7 +56,7 @@ setpagesize=false,
 %\etitle{p\LaTeX-Style file for Osuka-Sugimoto Lab. Meeting}
 % 著者の和文名
 \author{
-    　浪花　啓右
+    浪花　啓右
      }
 % 著者の英文名
 %\engauthor{
@@ -117,7 +117,7 @@ setpagesize=false,
  \label{eq:test}
 \end{align}
 どちらの環境内でも最新のやてふなら数学記号のショートカット（セミコロンキー）やギリシャ文字のショートカット（コロンキー）に反応してくれるので安心です．
-式を参照する場合は\refeq{test}とするとOK．
+式を参照する場合はEq.~\ref{eq:test}とするとOK．
 数式の環境はequationとかeqnarrayとかがありますが，一番のおすすめはalign環境です．
 一番融通がききつつ，レイアウトも綺麗です．おそらく一番のスタンダードだとおもいます．もっといいの知っている人はおしえてください．
 数式を使う人は\href{http://www.math.tohoku.ac.jp/~kuroki/LaTeX/howtolatex.html}{このサイト}も参照しましょう．
@@ -133,8 +133,10 @@ setpagesize=false,
 \end{itemize}
 載せましょう．これら全ては最終出力となる書類のpdfに直接埋め込むことができるので，タイプセットも早くて楽です．
 
-図の引用の例Fig.~\ref{fig:test}これは間違いではないけど・・・
-図の引用の例\reffig{test}．%せっかくreffigあるので活用しましょう．これ使う場合はチルダ内臓されているのでチルダの入れ忘れもなくて安心
+図の引用の例はFig.~\ref{fig:test}のようにしましょう．
+図の引用の例としてこちらの方法もあります\reffig{test}．
+しかし後者の方法は，osukalab2020.styが必要です．より一般的な書き方は前者なので，前者を使うのが良いでしょう．
+
 
 流派にもよるとは思いますが，figure環境の配置オプションはtb!ぐらいがいいと思います．
 widthなども，直接値を指定する（width=3.4cmとか）はできる限りやめましょう．だいたい\verb#width=\columnwidth#でぴったり入るはずです．それがダメな場合はだいたい元画像がよくないです．元画像を修正しましょう．
@@ -149,8 +151,8 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 \end{figure}
 \fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
-複数の画像を一つのfigure環境に入れたい場合は，subfigure環境やsubfig環境は古いようです．subcaption環境を使いましょう\reffig{animals}．
-こんな感じで参照も可能\reffig{frog}．
+複数の画像を一つのfigure環境に入れたい場合は，subfigure環境やsubfig環境は古いようです．subcaption環境を使いましょうFig.~\ref{fig:animals}．
+こんな感じで参照も可能Fig.~\ref{fig:frog}．
 
 \begin{figure}[tb]
   \begin{minipage}[b]{.5\columnwidth}
@@ -184,7 +186,7 @@ widthなども，直接値を指定する（width=3.4cmとか）はできる限�
 \end{table*}
 \fi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ここまでコメントアウト
 
-\reftab{test}はぶち抜き表の例だよ．
+Table~\ref{table:test}はぶち抜き表の例だよ．
 
 \begin{table*}[t!!]
   \caption{Sample table}
