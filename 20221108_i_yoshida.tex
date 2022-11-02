@@ -1,0 +1,165 @@
+\RequirePackage{plautopatch}
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{osukalab2020}
+\usepackage{epic,eepic}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[all, warning]{onlyamsmath}
+\usepackage{siunitx}
+\usepackage{txfonts}
+\usepackage{amssymb}
+\usepackage{comment}
+
+
+\pagestyle{empty}
+
+\headding{大須賀・杉本研 研究会資料}
+\title{災害やテロにおける現場探索のための脚型壁面歩行ロボットの製作}
+\author{吉田壱平}
+%\abstract{}
+%\keywords{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{緒言}
+災害やテロの現場調査などの人間が立ち入るのが困難な場所においては,人間の代わりに災害探査ロボットが活躍している~\cite{大須賀公一2004ヘビ型ロボットによる狭空間探索}．
+災害探査ロボットとして現在は,クローラ型~\cite{高森年2003災害における罹災者発見とクローラ型ロボット}や車輪型といった地面を動き回ることを前提に作られるものが多いが，障害物を乗り越えるために大型化してしまい結果的に活動範囲を狭めてしまうという課題がある．
+そこで障害物を乗り越えるという発想ではなく，よじ登ったりそもそも障害物のあるところを通らないといった，三次元的に移動することのできる壁面歩行ロボットに有用性があると考えられる．
+
+今日に至るまで壁面歩行ロボットというのは様々な形で実現されてきた．
+吸着機構としては,吸盤などの負圧を利用するもの~\cite{広瀬茂男1991四足壁面移動ロボット},磁力を利用するもの~\cite{高田洋吾2013立体的な環境で活動できる橋梁検査ロボットの開発},プロペラなどによるダウンフォースを利用するものなどがある．またその移動方法については車輪型やクローラ型,脚型などが存在する.その中でも,災害やテロの現場調査においては負圧による吸盤機構を有する脚型ロボットが適していると考えられる．
+負圧による吸着は密閉を作り出すことができれば,磁力と異なり吸着する対象物を選ばず,プロペラ式と異なり一度固定してしまえば安定な吸着力を維持しやすい．
+また吸着機構を有する脚型のロボットは脚の自由度によって吸着地点を選択でき,床から壁への移動や前後左右の自由な移動など3次元的な移動が可能である．加えて車輪やクローラでは躓いてしてしまうような障害物に対して跨ぐという選択肢をとることができる．
+以上のことから空気圧による吸着機構を有する脚型の壁面歩行ロボットの製作を目指す.
+その壁面歩行ロボット製作に向けて本研究ではまず,壁面のみを移動することのできる脚型壁面歩行ロボットの製作に取り組んだ．
+
+\begin{figure}
+    \centering
+    \includegraphics[width=40mm]{./figure/model_sucker.png}
+    \caption{The sucker atattched to gel.}
+    \label{fig:model_sucker}
+\end{figure}
+
+\section{空気圧を用いた吸着機構の製作}
+\subsection{吸盤の製作}
+負圧を発生させるための吸盤については,後述するゲルへの接着のしやすさと,脚部分との接続のしやすさの実現と,またその面積や形状を自由に変えられるという点を考慮して自作することにした．
+また,便宜上Fig.~\ref{fig:model_sucker}に示すように吸盤のパーツに椀状部と接面部という名前をつける.
+\subsubsection{椀状部の製作}
+椀状部の製作には気密性の高さと造形の容易さからウェーブ・シリコーンゴム(ウェーブ社製)を用いた．接面部との接着を考え先端は平面にし,脚部との接続のため突起をつけた.
+製作した椀状部をFig.~\ref{fig:siliconsucker}に示す．
+
+\begin{figure}[tb]
+    \begin{tabular}{cc}
+    \begin{minipage}{0.45\hsize}
+      \centering 
+      \includegraphics[width=\columnwidth]{./figure/sucker_botm.jpg}
+      \subcaption{Adsorption surface.}
+    \end{minipage}
+    \begin{minipage}{0.45\hsize}
+      \centering 
+      \includegraphics[width=\columnwidth]{./figure/sucker_side.jpg}
+      \subcaption{Side view.}
+    \end{minipage}
+  \end{tabular}
+  \caption{The silicon sucker.}
+  \label{fig:siliconsucker}
+\end{figure}
+
+\subsubsection{接面部の製作}
+吸盤による吸着では気密性が極めて重要である\cite{長田勇一2016壁面}．
+壁面歩行ロボットを考えるにあたり吸盤が平らな面に対して吸着能力を発揮することは必須であるが，多少の凹凸面に対しても吸着能力を発揮できなければ実世界での運用は難しい.
+そこで先行研究\cite{長田勇一2016壁面}をもとに吸盤の接面部分にゲルを貼ることで凹凸に対しての吸着能力を持たせた．
+ゲルにはウレタン（Craft Resin社 GUMMY CAST)を用いた．
+Fig.~\ref{fig:gelatattchedsucker}にゲルを貼った吸盤の様子を示す．
+このゲルによって椀状部単体では吸着できなかった凹凸を持つ吹き付けタイルに対する吸着を確認することができた.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=40mm]{./figure/gelsucker.jpg}
+    \caption{The sucker atattched to gel.}
+    \label{fig:gelatattchedsucker}
+\end{figure}
+
+\begin{comment}
+\subsubsection{吸盤の吸着力}
+Fig.~\ref{fig:pistonmodel}のように吸盤を簡単にモデル化し，
+大気圧を$P_{0}\mathrm{[Pa]}$，吸盤の表面積を$S\mathrm{[m^2]}$としてその吸着力$F\mathrm{[N]}$の理論値を求めた．ただし，吸気前の体積を$V_{0}\mathrm{[m^3]}$，吸気した体積を$V\mathrm{[m^3]}$として，その比を吸気体積比$k$として定めた．
+
+\begin{align}
+    F = P_{0}S(1 - \frac{1}{k+1})
+    \label{eq:suckerforce}
+   \end{align}
+   \begin{align}
+    k = \frac{V}{V_0}
+    \label{eq:suckerforce}
+\end{align}
+
+本研究においては吸着力の限界の計測にまでは至らなかったが，0.3MPaの圧縮空気をエジェクタ(ZU07LA)を介して吸着力に変換し,直径50mmの吸盤を用いて1.2kgの物体を持ち上げられる事までは確認した.今後壁面歩行をする機体の重量を考える際に吸着力の値は必要になると考えられるので，その理論計算式をここで示した．
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{./figure/model.png}
+    \caption{The model of piston sucker.}
+    \label{fig:pistonmodel}
+\end{figure}
+
+\end{comment}
+
+
+\subsection{空気圧による着脱の実現}
+歩行を実現するためには単に吸着するだけでなく空気を抜いて脱着することも求められる．そこで電磁弁を用いることで空気の圧縮と大気圧への解放を切り替えられるようにした.
+実験においてはコンプレッサにエジェクタを繋いで,空気の吸引を電磁弁によって制御出来るようにした.
+本研究においては吸着力の限界の計測にまでは至らなかったが，0.3MPaの圧縮空気をエジェクタ(ZU07LA)を介して吸着力に変換し,直径50mmの吸盤を用いて1.2kgの物体を持ち上げられる事までは確認した.
+また,将来的な機体の小型化のために60mmのダイヤフラムプラムポンプ(TKV27-1-6-0001)を用いても吸着実験を行い,同様に電磁弁で着脱の制御ができることを確認した.
+
+
+\section{1関節4足歩行ロボットの製作}
+壁面歩行ロボットにおいては,脚を踏み出す際に残った脚の吸着力のみで機体の体重を支えなければいけない.
+また,脚の数を増やせばその分だけ歩行に関する制御が難しくなる.
+以上の点を考慮して歩行方法は4足歩行を選択した.
+4足歩行ロボットを製作するにあたって,機体が軽量かつ簡単に歩行を実現できることを目的にファブウォーカー(ELEKIT社)というロボットを参考にした.
+このロボットは1関節の4足歩行ロボットで,取り付けられた2つのサーボモータを交互に動かすことでトロット歩行を実現している.
+製作においては地面との摩擦力を増やすため脚先にシリコンの滑り止めをつけた.Fig.~\ref{fig:quadruped_robot}に製作した機体を示す.
+
+歩行動作の実現にあたっては前後のサーボモータを同周期で動かすと停滞し歩行にならなかったため,時間差をつけることで歩行を実現した．これは時間差により地面と脚の間に空間が生まれることで歩行できるようになったからであると考えられる.
+制御にあたっては,サーボモータの回転角,2つのサーボモータが回転を始めるまでの時間差,1つのサーボモータの回転周期の3つのパラメータを変更することで様々な歩行形態を確認することができた.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=60mm]{./figure/4legbot.png}
+    \caption{The quadruped robot.}
+    \label{fig:quadruped_robot}
+\end{figure}
+
+\section{4足歩行ロボットを用いた斜面への吸着実験}
+4足歩行ロボットの脚に吸着機構をつけ,機体が180度回転し地面に背を向けた状態での吸着実験と斜面歩行実験を行った.
+吸着実験においては,4点設置に加えてトロット歩行中に起こる2点設置でも吸着し機体が天井に対し吊り下がっている状態でも吸着できることを確認した.
+Fig.~にその様子を示す．
+
+次に滑らかな平面を持つ斜面に対して吸着しながらの歩行実験を行った.
+斜面の角度は吸着能力がなければ重力に従って機体がずり落ちる約35度に設定し,4点設置による吸着をした状態から実験を始めた.
+この実験では1歩目を踏み出した際に斜面に対して吸着面が浮いてしまい密閉を作ることができなかったため,斜面歩行を実現することはできなかった.
+
+\section{結言}
+本研究では空気圧を用いた吸着機構を製作し,それをもとに簡易的な4足歩行の脚型壁面歩行ロボットを製作した.しかしながら斜面での歩行実験において脚を踏み出した際の密閉が確保できず,歩行を実現することができなかった.
+今後は,4足歩行ロボットを2関節にすることで吸着面の地面への押し付けを行い壁面歩行を実現することを試みる.
+
+\section{今後の予定}
+\begin{itemize}
+    \item 2関節の壁面歩行ロボットの設計($\sim$11月下旬)
+    \item 2関節壁面歩行ロボットの部品発注・製作(11月下旬$\sim$12月中旬)
+    \item 壁面歩行実験(12月中旬)
+    \item 卒論書き始め(12月下旬$\sim$)
+    \item 卒業発表準備(1月$\sim$)
+   \end{itemize}  
+
+
+{\small
+\bibliographystyle{osukalab}
+\bibliography{myref}
+\clearpage
+\end{document}
+
