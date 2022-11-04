@@ -4,46 +4,46 @@ The top-level auxiliary file: 20221108_i_yoshida.aux
 The style file: osukalab.bst
 Database file #1: myref.bib
 Warning--can't use both volume and number fields in weko_4205_1
-You've used 12 entries,
+You've used 10 entries,
             2420 wiz_defined-function locations,
-            643 strings with 6689 characters,
-and the built_in function-call counts, 5498 in all, are:
-= -- 501
-> -- 117
-< -- 12
-+ -- 47
-- -- 35
-* -- 300
-:= -- 571
+            627 strings with 6363 characters,
+and the built_in function-call counts, 4876 in all, are:
+= -- 456
+> -- 106
+< -- 10
++ -- 42
+- -- 32
+* -- 258
+:= -- 510
 add.period$ -- 0
-call.type$ -- 12
+call.type$ -- 10
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 332
-empty$ -- 572
-format.name$ -- 70
-if$ -- 1460
+cite$ -- 11
+duplicate$ -- 291
+empty$ -- 503
+format.name$ -- 64
+if$ -- 1298
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 12
-newline$ -- 39
-num.names$ -- 12
-pop$ -- 110
+int.to.str$ -- 10
+missing$ -- 10
+newline$ -- 33
+num.names$ -- 10
+pop$ -- 100
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 407
+skip$ -- 354
 stack$ -- 0
-substring$ -- 411
-swap$ -- 118
-text.length$ -- 12
+substring$ -- 374
+swap$ -- 107
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 36
-width$ -- 14
-write$ -- 105
-is.kanji.str$ -- 166
+while$ -- 30
+width$ -- 12
+write$ -- 91
+is.kanji.str$ -- 142
 (There was 1 warning)
