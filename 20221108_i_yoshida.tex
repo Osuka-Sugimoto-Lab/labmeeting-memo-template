@@ -63,26 +63,36 @@
 また,プロペラ式は移動の速さに利点があるが~\cite{weko_4205_1}，吸着の安定のための制御器への負担と,風などの外部環境の影響を受けることに課題がある~\cite{西亮1991推進力による壁面移動ロボットの研究,鈴木隆宏2009g1501}．
 よって本研究においては,吸着面の材質を選ばず,吸着面との機密性を保つことができれば,安定的な吸着力を発揮することのできる負圧式を吸着機構として選択した.
 
-現存する負圧式の壁面歩行ロボットはその移動方法を大きく,吸着式クローラ型~\cite{福田敏男1994壁面走行ロボットの研究}と脚型~\cite{広瀬茂男1991四足壁面移動ロボット}に分けることができる.
+現存する負圧式の壁面歩行ロボットは,その移動方法を大きく吸着式クローラ型~\cite{福田敏男1994壁面走行ロボットの研究}と脚型~\cite{広瀬茂男1991四足壁面移動ロボット}に分けることができる.
 一般に,吸着式クローラ型は移動速度において脚型よりも優れているが\cite{福田敏男1992壁面走行ロボッ}，脚型は脚の設置面を選択できるので,吸着のしにくい凹凸や亀裂を避けて移動することができる.
 以上のことから本研究では負圧による吸着機構を有する脚型の壁面歩行ロボットの製作を目指す.
 その壁面歩行ロボット製作に向けてまずは,壁面のみを移動することのできる脚型壁面歩行ロボットの開発と性能実験に取り組んだ．
 
 
-\begin{figure}
+\begin{figure}[t]
     \centering
-    \includegraphics[width=40mm]{./figure/model_sucker.png}
-    \caption{The sucker atattched to gel.}
+    \includegraphics[height=40mm,]{./figure/sideview_sucker.png}
+    \caption{Model of the sucker seen from the side.}
     \label{fig:model_sucker}
 \end{figure}
 
-\section{空気圧を用いた吸着機構の製作}
+\section{負圧を用いた吸着機構の製作}
 \subsection{ロボットの構成}
+製作した4足歩行ロボットの模式図をFig.~\ref{fig:model_of_the_quadruped}に示す．機体は負圧による吸着力を生み出す吸着部とサーボモータによって４足歩行運動を生み出す胴体部の2つに分けられる．
+その内，本章では吸着部について述べる．
+
+\begin{figure}
+    \centering
+    \includegraphics[width=60mm]{./figure/overview_model.png}
+    \caption{Model of the quadruped.}
+    \label{fig:model_of_the_quadruped}
+\end{figure}
+
 \subsection{吸盤の製作}
-負圧を発生させるための吸盤については,後述するゲルへの接着のしやすさと,脚部分との接続のしやすさの実現と,またその面積や形状を自由に変えられるという点を考慮して自作することにした．
-また,便宜上Fig.~\ref{fig:model_sucker}に示すように吸盤のパーツに椀状部と接面部という名前をつける.
+負圧を発生させるための吸盤については,後述するゲル性の接面部への接着のしやすさや,脚部分との接続のしやすさの実現,またその面積や形状を自由に変えられるという点を考慮して自作することにした．
+また,便宜上Fig.~\ref{fig:model_sucker}に示すように吸盤の本体を椀状部(cup)，壁面に接する部分を接面部(Adsorption surface)とする．
 \subsubsection{椀状部の製作}
-椀状部の製作にはウェーブ・シリコーンゴム(ウェーブ社製)を用いた．接面部との接着を考え先端は平面にし,脚部との接続のため突起をつけた.
+椀状部の製作にはウェーブ・シリコーンゴム(ウェーブ社製)を用いた．接面部との接着を考え椀状部の下面は平面にし,脚部との接続のため椀状部の上側に突起をつけた.
 製作した椀状部をFig.~\ref{fig:siliconsucker}に示す．
 
 \begin{figure}[tb]
@@ -98,23 +108,38 @@
       \subcaption{Side view.}
     \end{minipage}
   \end{tabular}
-  \caption{The silicon sucker.}
+  \caption{Prototype silicon sucker.}
   \label{fig:siliconsucker}
 \end{figure}
 
 \subsubsection{接面部の製作}
 吸盤による吸着では気密性が極めて重要である\cite{長田勇一2016壁面}．
-壁面歩行ロボットを考えるにあたり吸盤が平らな面に対して吸着能力を発揮することは必須であるが，多少の凹凸面に対しても吸着能力を発揮できなければ実世界での運用は難しい.
-そこで先行研究\cite{長田勇一2016壁面}をもとに吸盤の接面部分にゲルを貼ることで凹凸に対しての吸着能力を持たせた．
-ゲルにはウレタン（Craft Resin社 GUMMY CAST)を用いた．
+壁面歩行ロボットを考えるにあたり,吸盤が平らな面に対して吸着能力を発揮することは必須であるが，多少の凹凸面に対しても吸着能力を発揮できなければ多様な環境での運用は難しい.
+そこで先行研究\cite{長田勇一2016壁面}をもとに椀状部の下面にゲル性の接面部を貼ることで凹凸に対しての吸着能力を持たせた．
+接面部にはウレタン（Craft Resin社 GUMMY CAST)を用いた．
 Fig.~\ref{fig:gelatattchedsucker}にゲルを貼った吸盤の様子を示す．
-このゲルによって椀状部単体では吸着できなかった凹凸を持つ吹き付けタイルに対する吸着を確認することができた.
+この接面部を用いてピストンで負圧を圧政させる吸着実験を行い，椀状部単体では吸着できなかった約1$\sim$5mmの凹凸を持つ吹き付けタイルに対する吸着を確認することができた.
+実験に使用した壁の様子をFig.~\ref{fig:The wall used for the experiment}，吸着している様子をFig.\ref{fig:Adsorption experiments on rough surfaces}に示す．
 
-\begin{figure}
+\begin{figure}[t]
     \centering
     \includegraphics[width=40mm]{./figure/gelsucker.jpg}
     \caption{The sucker atattched to gel.}
     \label{fig:gelatattchedsucker}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=40mm]{./figure/wall}
+    \caption{The wall used for the experiment．}
+    \label{fig:The wall used for the experiment}
+\end{figure}
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=70mm]{./figure/gelsuckerex.PNG}
+    \caption{Adsorption experiments on rough surfaces.}
+    \label{fig:Adsorption experiments on rough surfaces}
 \end{figure}
 
 \begin{comment}
@@ -144,7 +169,7 @@ Fig.~\ref{fig:pistonmodel}のように吸盤を簡単にモデル化し，
 
 
 \subsection{空気圧による着脱の実現}
-歩行を実現するためには単に吸着するだけでなく空気を抜いて脱着することも求められる．そこで電磁弁を用いることで空気の圧縮と大気圧への解放を切り替えられるようにした.
+歩行を実現するためには単に吸着するだけでなく負圧を大気圧に解放して脱着することも求められる．そこで電磁弁を用いることで空気の圧縮と大気圧への解放を切り替えられるようにした.
 実験においてはコンプレッサにエジェクタを繋いで,空気の吸引を電磁弁によって制御出来るようにした.
 本研究においては吸着力の限界の計測にまでは至らなかったが，0.3MPaの圧縮空気をエジェクタ(ZU07LA)を介して吸着力に変換し,直径50mmの吸盤を用いて1.2kgの物体を持ち上げられる事までは確認した.
 また,将来的な機体の小型化のために60mmのダイヤフラムプラムポンプ(TKV27-1-6-0001)を用いても吸着実験を行い,同様に電磁弁で着脱の制御ができることを確認した.

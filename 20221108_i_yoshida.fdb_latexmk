@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex 20221108_i_yoshida"] 1667559194 "20221108_i_yoshida.aux" "20221108_i_yoshida.bbl" "20221108_i_yoshida" 1667559196
+["bibtex 20221108_i_yoshida"] 1667574427 "20221108_i_yoshida.aux" "20221108_i_yoshida.bbl" "20221108_i_yoshida" 1667574432
   "./osukalab.bst" 1666776255 21405 1eff3021b317c771f9c65ad60f430bb1 ""
-  "20221108_i_yoshida.aux" 1667559195 3487 f8854b2b58e0bf0b3531d064fe238f0e "latex"
+  "20221108_i_yoshida.aux" 1667574430 4096 70ecb210abd7a8e6172f6d0dac6e351c "latex"
   "myref.bib" 1667558753 6514 16c4c0c37af9320f21c90631f3968386 ""
   (generated)
   "20221108_i_yoshida.bbl"
   "20221108_i_yoshida.blg"
-["dvipdf"] 1667559196 "20221108_i_yoshida.dvi" "20221108_i_yoshida.pdf" "20221108_i_yoshida" 1667559197
-  "20221108_i_yoshida.dvi" 1667559195 21104 39f44fe7ee171b93298c13d6b7077dfa "latex"
+["dvipdf"] 1667574430 "20221108_i_yoshida.dvi" "20221108_i_yoshida.pdf" "20221108_i_yoshida" 1667574432
+  "20221108_i_yoshida.dvi" 1667574430 22784 69781f4fca13d7c0b4208408b6c2110e "latex"
   (generated)
   "20221108_i_yoshida.pdf"
-["latex"] 1667559194 "/Users/yoshidaippei/Desktop/20221108_labmeeting/20221108_i_yoshida.tex" "20221108_i_yoshida.dvi" "20221108_i_yoshida" 1667559196
-  "/Users/yoshidaippei/Desktop/20221108_labmeeting/20221108_i_yoshida.tex" 1667559192 16262 99f1844ba9038d0cf496bdbf28028366 ""
+["latex"] 1667574427 "/Users/yoshidaippei/Desktop/20221108_labmeeting/20221108_i_yoshida.tex" "20221108_i_yoshida.dvi" "20221108_i_yoshida" 1667574432
+  "/Users/yoshidaippei/Desktop/20221108_labmeeting/20221108_i_yoshida.tex" 1667574330 17578 4806b1c2042e512665b39066d90f9d5e ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -102,14 +102,17 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/euptex/uplatex.fmt" 1649666150 2801514 2831aaea3049d55b4dd360c9e7d401dc ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "20221108_i_yoshida.aux" 1667559195 3487 f8854b2b58e0bf0b3531d064fe238f0e "latex"
-  "20221108_i_yoshida.bbl" 1667559194 3004 068545ec8fe0f82259ae164947608b4d "bibtex 20221108_i_yoshida"
-  "20221108_i_yoshida.tex" 1667559192 16262 99f1844ba9038d0cf496bdbf28028366 ""
+  "20221108_i_yoshida.aux" 1667574430 4096 70ecb210abd7a8e6172f6d0dac6e351c "latex"
+  "20221108_i_yoshida.bbl" 1667574427 3004 068545ec8fe0f82259ae164947608b4d "bibtex 20221108_i_yoshida"
+  "20221108_i_yoshida.tex" 1667574330 17578 4806b1c2042e512665b39066d90f9d5e ""
   "figure/4legbot.png" 1667304507 507457 88e5920b7f202492c36352182fc8d9e2 ""
   "figure/gelsucker.jpg" 1667220867 38121 1d8c9cd7cfbb92a5661f86395ede2453 ""
-  "figure/model_sucker.png" 1667218684 17043 4dc4cf0931750f8909f5b9da68cbdab4 ""
+  "figure/gelsuckerex.PNG" 1655367506 820095 ae7c8917f15a772e629bd28d14595650 ""
+  "figure/overview_model.png" 1667570099 108562 a300db239521cea1255267a3af61d491 ""
+  "figure/sideview_sucker.png" 1667571860 11175 ba4df10655184de7358a5628ed6fc6fe ""
   "figure/sucker_botm.jpg" 1667220223 233101 56c7cb6bb2fd89501b39c597521f0893 ""
   "figure/sucker_side.jpg" 1667220223 349081 448d38a9366b43b068d16e224e293486 ""
+  "figure/wall.png" 1667573147 184596 dfed93661a470b1317d18439d2f3842e ""
   "osukalab2020.sty" 1666776255 5461 51f774b60c306099179938dc61bd990f ""
   (generated)
   "20221108_i_yoshida.aux"
