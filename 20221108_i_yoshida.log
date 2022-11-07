@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.4.11)  7 NOV 2022 02:39
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.4.11)  7 NOV 2022 23:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -825,26 +825,25 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 12.0pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 27.
- Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 50.
+(Font)              scaled to size 7.0pt on input line 29.
 File: ./figure/sideview_sucker.png Graphic file (type bmp)
 <./figure/sideview_sucker.png>
 
-Overfull \hbox (12.03635pt too wide) in paragraph at lines 74--75
+Overfull \hbox (12.03635pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
 LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 75.
+(Font)              scaled to size 10.0pt on input line 54.
 LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 75.
+(Font)              scaled to size 10.0pt on input line 54.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 75.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
 File: ./figure/overview_model.png Graphic file (type bmp)
 <./figure/overview_model.png>
 [1
@@ -855,15 +854,15 @@ File: ./figure/overview_model.png Graphic file (type bmp)
 File: ./figure/sucker_botm.jpg Graphic file (type bmp)
 <./figure/sucker_botm.jpg>
 LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <8.99994> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 103.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 86.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 103.
+(Font)              scaled to size 8.99994pt on input line 86.
 LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <8.99994> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 103.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 86.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 103.
+(Font)              scaled to size 8.99994pt on input line 86.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8.99994> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 103.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 86.
 File: ./figure/sucker_side.jpg Graphic file (type bmp)
 <./figure/sucker_side.jpg>
 File: ./figure/gelsucker.jpg Graphic file (type bmp)
@@ -873,41 +872,22 @@ File: ./figure/wall.png Graphic file (type bmp)
 File: ./figure/gelsuckerex.PNG Graphic file (type bmp)
 <./figure/gelsuckerex.PNG>
 
-Underfull \hbox (badness 1132) in paragraph at lines 141--141
-[][]|\OT1/txr/bx/n/10 Ad-sorp-tion ex-per-i-ments on rough sur-
+Underfull \hbox (badness 2426) in paragraph at lines 121--121
+[][]|\OT1/txr/bx/n/10 Ad-sorp-tion ex-per-i-ment on rough sur-
  []
 
 Excluding 'comment' comment. Excluding 'comment' comment.
 File: ./figure/System_configuration_of_adsorption_experiments.png Graphic file (type bmp)
 <./figure/System_configuration_of_adsorption_experiments.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
+ [2]
 File: ./figure/4legbot.png Graphic file (type bmp)
 <./figure/4legbot.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: ./figure/pattern1.png Graphic file (type bmp)
 <./figure/pattern1.png>
 File: ./figure/pattern2.png Graphic file (type bmp)
 <./figure/pattern2.png>
 File: ./figure/pattern3.png Graphic file (type bmp)
 <./figure/pattern3.png>
-
-Overfull \hbox (9.99998pt too wide) in paragraph at lines 244--261
- [][][][] 
- []
-
-
-LaTeX Warning: Float too large for page by 37.71175pt on input line 263.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: ./figure/pattern1_real.png Graphic file (type bmp)
 <./figure/pattern1_real.png>
 File: ./figure/pattern2_real.png Graphic file (type bmp)
@@ -915,29 +895,25 @@ File: ./figure/pattern2_real.png Graphic file (type bmp)
 File: ./figure/pattern3_reak.png Graphic file (type bmp)
 <./figure/pattern3_reak.png>
 
-Overfull \hbox (12.68277pt too wide) in paragraph at lines 266--283
+Overfull \hbox (12.68277pt too wide) in paragraph at lines 247--264
 [][][][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[3]
 File: ./figure/quadruped.png Graphic file (type bmp)
 <./figure/quadruped.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: ./figure/4legs_suck.png Graphic file (type bmp)
 <./figure/4legs_suck.png>
 File: ./figure/2legs_suck.png Graphic file (type bmp)
 <./figure/2legs_suck.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 329.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ./figure/2legs_suck2.png Graphic file (type bmp)
+<./figure/2legs_suck2.png>
+File: ./figure/Slope_walking_experiment.png Graphic file (type bmp)
+<./figure/Slope_walking_experiment.png>
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 324.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-) [3] (./20221108_i_yoshida.bbl) [4] [5
+) (./20221108_i_yoshida.bbl [4]) [5
 
 ]
 ***** List of packages loaded by `plautopatch': *****
@@ -947,15 +923,15 @@ No complaints by nag.
 (./20221108_i_yoshida.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 337 ({)
+### simple group (level 1) entered at line 332 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12480 strings out of 478716
- 281743 string characters out of 5858225
- 539564 words of memory out of 5000000
- 30737 multiletter control sequences out of 15000+600000
+ 12492 strings out of 478716
+ 282161 string characters out of 5858225
+ 537582 words of memory out of 5000000
+ 30747 multiletter control sequences out of 15000+600000
  498348 words of font info for 107 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 81i,13n,104p,937b,698s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 81i,13n,104p,937b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 20221108_i_yoshida.dvi (5 pages, 28484 bytes).
+Output written on 20221108_i_yoshida.dvi (5 pages, 28780 bytes).
