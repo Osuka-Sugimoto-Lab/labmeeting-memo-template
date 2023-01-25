@@ -89,10 +89,10 @@
 \end{figure}
 
 \subsection{吸盤の製作}
-負圧を発生させるための吸盤については,後述するゲル性の接面部への接着のしやすさやと,脚部分との接続のしやすさ,またその面積や形状を自由に変えられるという点を考慮して,自作することにした．
+負圧を発生させるための吸盤については,後述するゲル性の接面部への接着のしやすさや,脚部分との接続のしやすさの実現,またその面積や形状を自由に変えられるという点を考慮して自作することにした．
 また,便宜上Fig.~\ref{fig:model_sucker}に示すように吸盤の本体を椀状部(cup)，壁面に接する部分を接面部(Adsorption surface)とする．
 \subsubsection{椀状部の製作}
-椀状部の製作にはウェーブ・シリコーンゴム(ウェーブ社製)を用いた．接面部との接着を考え椀状部のFig.~\ref{fig:model_sucker}における下面は平面にし,脚部との接続のため,椀状部の上側に突起をつけた.
+椀状部の製作にはウェーブ・シリコーンゴム(ウェーブ社製)を用いた．接面部との接着を考え椀状部の下面は平面にし,脚部との接続のため椀状部の上側に突起をつけた.
 製作した椀状部をFig.~\ref{fig:siliconsucker}に示す．
 
 \begin{figure}[tb]
@@ -114,11 +114,11 @@
 
 \subsubsection{接面部の製作}
 吸盤による吸着では気密性が極めて重要である\cite{長田勇一2016壁面}．
-壁面歩行ロボットを考えるにあたり,吸盤が平らな面に対して吸着能力を発揮することは必須であるが，多少の凹凸面に対しても吸着能力を発揮できなければ,多様な環境での運用は難しい.
+壁面歩行ロボットを考えるにあたり,吸盤が平らな面に対して吸着能力を発揮することは必須であるが，多少の凹凸面に対しても吸着能力を発揮できなければ多様な環境での運用は難しい.
 そこで先行研究\cite{長田勇一2016壁面}をもとに椀状部の下面にゲル性の接面部を貼ることで凹凸に対しての吸着能力を持たせた．
 接面部にはウレタン（Craft Resin社 GUMMY CAST)を用いた．
-Fig.~\ref{fig:gelatattchedsucker}に接面部を貼った吸盤の様子を示す．
-この接面部を用いて,ピストンで負圧を圧政させる吸着実験を行い，椀状部単体では吸着できなかった約1$\sim$5mmの凹凸を持つ吹き付けタイルに対する吸着を確認することができた.
+Fig.~\ref{fig:gelatattchedsucker}にゲルを貼った吸盤の様子を示す．
+この接面部を用いてピストンで負圧を圧政させる吸着実験を行い，椀状部単体では吸着できなかった約1$\sim$5mmの凹凸を持つ吹き付けタイルに対する吸着を確認することができた.
 実験に使用した壁の様子をFig.~\ref{fig:The wall used for the experiment}，吸着している様子をFig.\ref{fig:Adsorption experiments on rough surfaces}に示す．
 
 \begin{figure}[t]
@@ -169,68 +169,22 @@ Fig.~\ref{fig:pistonmodel}のように吸盤を簡単にモデル化し，
 
 
 \subsection{空気圧による着脱の実現}
-歩行を実現するためには単に吸着するだけでなく負圧を大気圧に解放して脱着することも求められる．
-そこで電磁弁を用いることで空気の圧縮と大気圧への解放を切り替えられるようにした.
+歩行を実現するためには単に吸着するだけでなく負圧を大気圧に解放して脱着することも求められる．そこで電磁弁を用いることで空気の圧縮と大気圧への解放を切り替えられるようにした.
 実験においてはコンプレッサにエジェクタを繋いで,空気の吸引を電磁弁によって制御出来るようにした.
-Fig.~\ref{fig:System configuration for adsorption experiments}にそのシステム構成を示す．
-この実験において吸着力の性能を測るため，コンプレッサから$P=0.3$[MPa]の圧縮空気を発生させ,エジェクタ(ZU07LA)を介して吸着力に変換し,直径$d=$50[mm]の吸盤を用いて,1.2kgの立方体の金属塊の持ち上げ実験を行い,成功した.
-Table~\ref{table:parameters}に実験時の各種パラメータの値を示す．
-
-\begin{comment}
+本研究においては吸着力の限界の計測にまでは至らなかったが，0.3MPaの圧縮空気をエジェクタ(ZU07LA)を介して吸着力に変換し,直径50mmの吸盤を用いて1.2kgの物体を持ち上げられる事までは確認した.
 また,将来的な機体の小型化のために60mmのダイヤフラムプラムポンプ(TKV27-1-6-0001)を用いても吸着実験を行い,同様に電磁弁で着脱の制御ができることを確認した.
-\end{comment}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=80mm]{./figure/System_configuration_of_adsorption_experiments.png}
-    \caption{System configuration of adsorption experiments.}
-    \label{fig:System configuration for adsorption experiments}
-\end{figure}
-
-\begin{table}
-    \caption{Parameters of metal lifting experiment using adsorption mechanism}
-     \label{table:parameters}
-     \centering
-     \begin{tabular}{cc}\hline
-      Parameters & Actual values \\ \hline 
-     $P$ & 0.3[MPa]\\ 
-     $d$ & 60[mm]\\ 
-     $m$ & 1.2[kg]\\\hline    
-     \end{tabular}
-  \end{table}
 
 \section{1関節4足歩行ロボットの製作}
 壁面歩行ロボットにおいては,脚を踏み出す際に残った脚の吸着力のみで機体の体重を支えなければいけない.
-よって,2脚や3脚では姿勢によって吸着が不安定になる状態が生まれてしまう~\cite{広瀬茂男1991四足壁面移動ロボット}．
-また,脚の本数の増加は機体の重量の増加につながるため，できる限り少ない脚で機体を構成するべきである．
-以上の点を考慮して４脚を有する機体を製作した.
+また,脚の数を増やせばその分だけ歩行に関する制御が難しくなる.
+以上の点を考慮して歩行方法は4足歩行を選択した.
 4足歩行ロボットを製作するにあたって,機体が軽量かつ簡単に歩行を実現できることを目的にファブウォーカー(ELEKIT社)というロボットを参考にした.
-このロボットは1関節の4足歩行ロボットで,取り付けられた2つのサーボモータを交互に動かすことで歩行を実現している.
-製作においては地面との摩擦力を増やすため，脚先にシリコンの滑り止めをつけた.Fig.~\ref{fig:quadruped_robot}に製作した機体を示す.
+このロボットは1関節の4足歩行ロボットで,取り付けられた2つのサーボモータを交互に動かすことでトロット歩行を実現している.
+製作においては地面との摩擦力を増やすため脚先にシリコンの滑り止めをつけた.Fig.~\ref{fig:quadruped_robot}に製作した機体を示す.
 
-歩行動作の実現にあたっては前後のサーボモータを同周期で動かすと，停滞し歩行にならなかったため,時間差をつけることで歩行を実現した．
-これは時間差により地面と脚の間に隙間が生まれることで歩行できるようになったからであると考えられる.
-
-制御にあたっては,サーボモータの回転角$\theta$[degree],片方のサーボモータが動いてからもう片方のサーボモータが回転を始めるまでの時間差$t$[ms],1つのサーボモータの回転周期$T$[ms]の3つのパラメータを変更することで様々な歩行形態を確認することができた.
-実際に確認できた歩行のうち3パターンの歩行形態を示す．
-Table.\ref{table:Parameters_in_quadruped_experiment}に各パターンにおけるパラメータの値を示した．
-各パターンにおけるパラメータを用いて4足歩行を行った際の理論的な歩容をGait chartを用いて示す．
-Gait chartとは歩行時の接地状態を視覚的に表現した図であり,横軸が経過時間,縦軸が各脚の接地の状態を表す．
-Fig.~\ref{fig:Gait_chart_of_quadruped}に各パターンのGait chartを示す．脚の遊脚期を白，支持脚時を黒で表している．また,RFは右前脚,RHは右後脚,LFは左前脚,LHは左後脚を表している．
-また，各パターンの実機実験の最初の4歩の様子をFig.~\ref{fig:Quadruped_robot_walking}に示す．
-
-
-\begin{table}
-    \caption{Parameters in quadruped experiment}
-     \label{table:Parameters_in_quadruped_experiment}
-     \centering
-     \begin{tabular}{cccc}\hline
-      Pattern & $\theta$ & $t_{df}$ & $T$ \\ \hline 
-     1 & 30$^\circ$ & 100[ms] & 1000[ms] \\ 
-     2 & 30$^\circ$ & 20[ms] & 100[ms] \\ 
-     3 & 40$^\circ$ & 100[ms] & 600[ms] \\ \hline    
-     \end{tabular}
-  \end{table}
+歩行動作の実現にあたっては前後のサーボモータを同周期で動かすと停滞し歩行にならなかったため,時間差をつけることで歩行を実現した．これは時間差により地面と脚の間に空間が生まれることで歩行できるようになったからであると考えられる.
+制御にあたっては,サーボモータの回転角,2つのサーボモータが回転を始めるまでの時間差,1つのサーボモータの回転周期の3つのパラメータを変更することで様々な歩行形態を確認することができた.
 
 \begin{figure}
     \centering
@@ -239,82 +193,10 @@ Fig.~\ref{fig:Gait_chart_of_quadruped}に各パターンのGait chartを示す�
     \label{fig:quadruped_robot}
 \end{figure}
 
-\begin{figure}[h]
-    \centering 
-    \begin{tabular}{c}
-    \begin{minipage}[t]{1\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/pattern1.png}
-      \subcaption{Pattern1.}
-    \end{minipage}\\
-    \begin{minipage}{1\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/pattern2.png}
-      \subcaption{Pattern2.}
-    \end{minipage}\\
-    \begin{minipage}{1\hsize}
-        \centering 
-        \includegraphics[width=\columnwidth]{./figure/pattern3.png}
-        \subcaption{Pattern3.}
-      \end{minipage}\\
-  \end{tabular}
-  \caption{Gait chart of quadruped.}
-  \label{fig:Gait_chart_of_quadruped}
-\end{figure}
-
-\begin{figure}[h]
-    \begin{tabular}{ccc}
-    \begin{minipage}{0.33\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/pattern1_real.png}
-      \subcaption{pattern1.}
-    \end{minipage}
-    \begin{minipage}{0.33\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/pattern2_real.png}
-      \subcaption{pattern2.}
-    \end{minipage}
-    \begin{minipage}{0.33\hsize}
-        \centering 
-        \includegraphics[width=\columnwidth]{./figure/pattern3_reak.png}
-        \subcaption{pattern3.}
-      \end{minipage}
-  \end{tabular}
-  \caption{Quadruped robot walking.}
-  \label{fig:Quadruped_robot_walking}
-\end{figure}
-
 \section{4足歩行ロボットを用いた斜面への吸着実験}
-4足歩行ロボットの脚に吸着機構をつけた．製作した機体をFig.~\ref{fig:The_quadruped_with_sucker.}に示す．
-この機体を吸着機構によって支持できるか確認するために,アクリル板に対し4脚または2脚で接地しアクリル板を180度回転させて機体が支持できるかの実験を行った．実験の模式図をFig.~\ref{fig:Adsorption_experiments_on_ceilings}に示す．
-この実験で2脚でも吸着できることを確認した．
-180度回転し地面に背を向けた状態での吸着実験と斜面歩行実験を行った.
+4足歩行ロボットの脚に吸着機構をつけ,機体が180度回転し地面に背を向けた状態での吸着実験と斜面歩行実験を行った.
 吸着実験においては,4点設置に加えてトロット歩行中に起こる2点設置でも吸着し機体が天井に対し吊り下がっている状態でも吸着できることを確認した.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=80mm]{./figure/quadruped.png}
-    \caption{The quadruped with sucker.}
-    \label{fig:The_quadruped_with_sucker.}
-\end{figure}
-
-
-\begin{figure}[h]
-    \begin{tabular}{cc}
-    \begin{minipage}{0.45\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/4legs_suck.png}
-      \subcaption{4legs.}
-    \end{minipage}
-    \begin{minipage}{0.45\hsize}
-      \centering 
-      \includegraphics[width=\columnwidth]{./figure/2legs_suck.png}
-      \subcaption{2legs.}
-    \end{minipage}
-  \end{tabular}
-  \caption{Adsorption experiments on acrylic plate.}
-  \label{fig:Adsorption_experiments_on_ceilings}
-\end{figure}
+Fig.~にその様子を示す．
 
 次に滑らかな平面を持つ斜面に対して吸着しながらの歩行実験を行った.
 斜面の角度は吸着能力がなければ重力に従って機体がずり落ちる約35度に設定し,4点設置による吸着をした状態から実験を始めた.

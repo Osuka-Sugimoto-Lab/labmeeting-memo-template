@@ -708,50 +708,10 @@ INPUT ./figure/gelsuckerex.PNG
 INPUT ./figure/gelsuckerex.PNG
 INPUT ./figure/gelsuckerex.PNG
 INPUT extractbb -B cropbox -O ./figure/gelsuckerex.PNG
-INPUT ./figure/System_configuration_of_adsorption_experiments.png
-INPUT ./figure/System_configuration_of_adsorption_experiments.png
-INPUT ./figure/System_configuration_of_adsorption_experiments.png
-INPUT extractbb -B cropbox -O ./figure/System_configuration_of_adsorption_experiments.png
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png
 INPUT extractbb -B cropbox -O ./figure/4legbot.png
-INPUT ./figure/pattern1.png
-INPUT ./figure/pattern1.png
-INPUT ./figure/pattern1.png
-INPUT extractbb -B cropbox -O ./figure/pattern1.png
-INPUT ./figure/pattern2.png
-INPUT ./figure/pattern2.png
-INPUT ./figure/pattern2.png
-INPUT extractbb -B cropbox -O ./figure/pattern2.png
-INPUT ./figure/pattern3.png
-INPUT ./figure/pattern3.png
-INPUT ./figure/pattern3.png
-INPUT extractbb -B cropbox -O ./figure/pattern3.png
-INPUT ./figure/pattern1_real.png
-INPUT ./figure/pattern1_real.png
-INPUT ./figure/pattern1_real.png
-INPUT extractbb -B cropbox -O ./figure/pattern1_real.png
-INPUT ./figure/pattern2_real.png
-INPUT ./figure/pattern2_real.png
-INPUT ./figure/pattern2_real.png
-INPUT extractbb -B cropbox -O ./figure/pattern2_real.png
-INPUT ./figure/pattern3_reak.png
-INPUT ./figure/pattern3_reak.png
-INPUT ./figure/pattern3_reak.png
-INPUT extractbb -B cropbox -O ./figure/pattern3_reak.png
-INPUT ./figure/quadruped.png
-INPUT ./figure/quadruped.png
-INPUT ./figure/quadruped.png
-INPUT extractbb -B cropbox -O ./figure/quadruped.png
-INPUT ./figure/4legs_suck.png
-INPUT ./figure/4legs_suck.png
-INPUT ./figure/4legs_suck.png
-INPUT extractbb -B cropbox -O ./figure/4legs_suck.png
-INPUT ./figure/2legs_suck.png
-INPUT ./figure/2legs_suck.png
-INPUT ./figure/2legs_suck.png
-INPUT extractbb -B cropbox -O ./figure/2legs_suck.png
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
