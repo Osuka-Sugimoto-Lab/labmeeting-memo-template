@@ -752,14 +752,6 @@ INPUT ./figure/2legs_suck.png
 INPUT ./figure/2legs_suck.png
 INPUT ./figure/2legs_suck.png
 INPUT extractbb -B cropbox -O ./figure/2legs_suck.png
-INPUT ./figure/2legs_suck2.png
-INPUT ./figure/2legs_suck2.png
-INPUT ./figure/2legs_suck2.png
-INPUT extractbb -B cropbox -O ./figure/2legs_suck2.png
-INPUT ./figure/Slope_walking_experiment.png
-INPUT ./figure/Slope_walking_experiment.png
-INPUT ./figure/Slope_walking_experiment.png
-INPUT extractbb -B cropbox -O ./figure/Slope_walking_experiment.png
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
