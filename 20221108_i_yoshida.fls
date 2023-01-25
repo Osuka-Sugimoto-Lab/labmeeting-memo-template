@@ -692,11 +692,11 @@ INPUT ./figure/sucker_side.jpg
 INPUT ./figure/sucker_side.jpg
 INPUT ./figure/sucker_side.jpg
 INPUT extractbb -B cropbox -O ./figure/sucker_side.jpg
-OUTPUT 20221108_i_yoshida.dvi
 INPUT ./figure/gelsucker.jpg
 INPUT ./figure/gelsucker.jpg
 INPUT ./figure/gelsucker.jpg
 INPUT extractbb -B cropbox -O ./figure/gelsucker.jpg
+OUTPUT 20221108_i_yoshida.dvi
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png
