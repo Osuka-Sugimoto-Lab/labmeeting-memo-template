@@ -674,18 +674,13 @@ INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/jlreq/ujlreqg-v.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/jlreq/ujlreqg.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/txfonts/txb.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/jlreq/ujlreq-v.tfm
-INPUT ./figure/sideview_sucker.png
-INPUT ./figure/sideview_sucker.png
-INPUT ./figure/sideview_sucker.png
-INPUT extractbb -B cropbox -O ./figure/sideview_sucker.png
+INPUT ./figure/model_sucker.png
+INPUT ./figure/model_sucker.png
+INPUT ./figure/model_sucker.png
+INPUT extractbb -B cropbox -O ./figure/model_sucker.png
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/jlreq/ujlreqg-v.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/jlreq/ujlreqg.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/txfonts/txb.tfm
-INPUT ./figure/overview_model.png
-INPUT ./figure/overview_model.png
-INPUT ./figure/overview_model.png
-INPUT extractbb -B cropbox -O ./figure/overview_model.png
-OUTPUT 20221108_i_yoshida.dvi
 INPUT ./figure/sucker_botm.jpg
 INPUT ./figure/sucker_botm.jpg
 INPUT ./figure/sucker_botm.jpg
@@ -697,17 +692,11 @@ INPUT ./figure/sucker_side.jpg
 INPUT ./figure/sucker_side.jpg
 INPUT ./figure/sucker_side.jpg
 INPUT extractbb -B cropbox -O ./figure/sucker_side.jpg
+OUTPUT 20221108_i_yoshida.dvi
 INPUT ./figure/gelsucker.jpg
 INPUT ./figure/gelsucker.jpg
 INPUT ./figure/gelsucker.jpg
 INPUT extractbb -B cropbox -O ./figure/gelsucker.jpg
-INPUT ./figure/wall.png
-INPUT ./figure/wall.png
-INPUT extractbb -B cropbox -O ./figure/wall.png
-INPUT ./figure/gelsuckerex.PNG
-INPUT ./figure/gelsuckerex.PNG
-INPUT ./figure/gelsuckerex.PNG
-INPUT extractbb -B cropbox -O ./figure/gelsuckerex.PNG
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png
 INPUT ./figure/4legbot.png

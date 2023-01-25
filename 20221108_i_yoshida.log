@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.4.11)  5 NOV 2022 00:07
+This is e-upTeX, Version 3.141592653-p4.0.0-u1.28-220214-2.6 (utf8.uptex) (TeX Live 2022) (preloaded format=uplatex 2022.4.11)  4 NOV 2022 19:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -828,13 +828,8 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
  Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 7.0pt on input line 50.
-File: ./figure/sideview_sucker.png Graphic file (type bmp)
-<./figure/sideview_sucker.png>
-
-Overfull \hbox (12.03635pt too wide) in paragraph at lines 74--75
- [][] 
- []
-
+File: ./figure/model_sucker.png Graphic file (type bmp)
+<./figure/model_sucker.png>
 LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <10> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 75.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
@@ -845,42 +840,32 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 10.0pt on input line 75.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 75.
-File: ./figure/overview_model.png Graphic file (type bmp)
-<./figure/overview_model.png>
-[1
+File: ./figure/sucker_botm.jpg Graphic file (type bmp)
+<./figure/sucker_botm.jpg>
+LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <8.99994> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 93.
+LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <8.99994> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 93.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8.99994> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 93.
+File: ./figure/sucker_side.jpg Graphic file (type bmp)
+<./figure/sucker_side.jpg>
+ [1
 
 
 
 ]
-File: ./figure/sucker_botm.jpg Graphic file (type bmp)
-<./figure/sucker_botm.jpg>
-LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <8.99994> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 103.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 103.
-LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <8.99994> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 103.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 103.
-LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8.99994> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 103.
-File: ./figure/sucker_side.jpg Graphic file (type bmp)
-<./figure/sucker_side.jpg>
 File: ./figure/gelsucker.jpg Graphic file (type bmp)
 <./figure/gelsucker.jpg>
-File: ./figure/wall.png Graphic file (type bmp)
-<./figure/wall.png>
-File: ./figure/gelsuckerex.PNG Graphic file (type bmp)
-<./figure/gelsuckerex.PNG>
-
-Underfull \hbox (badness 1132) in paragraph at lines 141--141
-[][]|\OT1/txr/bx/n/10 Ad-sorp-tion ex-per-i-ments on rough sur-
- []
-
-Excluding 'comment' comment. [2]
+ Excluding 'comment' comment.
 File: ./figure/4legbot.png Graphic file (type bmp)
 <./figure/4legbot.png>
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 211.
+ [2]
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 186.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) (./20221108_i_yoshida.bbl) [3]
@@ -891,15 +876,15 @@ No complaints by nag.
 (./20221108_i_yoshida.aux) )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 219 ({)
+### simple group (level 1) entered at line 194 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12421 strings out of 478716
- 279958 string characters out of 5858225
- 537505 words of memory out of 5000000
- 30688 multiletter control sequences out of 15000+600000
+ 12388 strings out of 478716
+ 279207 string characters out of 5858225
+ 539481 words of memory out of 5000000
+ 30663 multiletter control sequences out of 15000+600000
  498348 words of font info for 107 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  81i,13n,104p,937b,697s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 20221108_i_yoshida.dvi (3 pages, 22784 bytes).
+Output written on 20221108_i_yoshida.dvi (3 pages, 21104 bytes).
